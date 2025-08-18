@@ -8,26 +8,6 @@ import json
 import os
 import re
 
-# --- Custom CSS for Discover Button Only ---
-st.markdown("""
-<style>
-div[data-testid="stButton"][data-baseweb="button"][kind="primary"] button[kind="primary"][key="discover_btn"] {
-    background-color: white !important;
-    color: #dc3545 !important;   /* red text */
-    border: 2px solid #dc3545 !important;
-    font-weight: bold !important;
-    border-radius: 8px !important;
-    transition: all 0.3s ease-in-out;
-}
-
-/* Hover effect */
-div[data-testid="stButton"][data-baseweb="button"][kind="primary"] button[kind="primary"][key="discover_btn"]:hover {
-    background-color: #dc3545 !important;
-    color: white !important;
-}
-</style>
-""", unsafe_allow_html=True)
-
 # --- Page config ---
 st.set_page_config(
     page_title="Student Engagement Clustering Dashboard", 
