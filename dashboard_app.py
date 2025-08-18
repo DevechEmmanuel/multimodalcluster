@@ -8,6 +8,26 @@ import json
 import os
 import re
 
+# --- Custom CSS for Discover Cluster button ---
+st.markdown("""
+<style>
+/* Target ONLY the 'Click to Discover Cluster' button */
+div.stButton > button[kind="secondary"] {
+    background-color: white !important;
+    color: #dc3545 !important;  /* red text */
+    border: 2px solid #dc3545 !important;
+    border-radius: 8px !important;
+    font-weight: bold !important;
+}
+
+/* Hover effect */
+div.stButton > button[kind="secondary"]:hover {
+    background-color: #dc3545 !important;
+    color: white !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 # --- Page config ---
 st.set_page_config(
     page_title="Student Engagement Clustering Dashboard", 
