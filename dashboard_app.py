@@ -8,11 +8,11 @@ import json
 import os
 import re
 
-# --- Custom CSS for Discover Cluster button ---
+# --- Custom CSS ONLY for "Click to Discover Cluster" button ---
 st.markdown("""
 <style>
-/* Target ONLY the 'Click to Discover Cluster' button */
-div.stButton > button[kind="secondary"] {
+/* Match only the specific button by its label text */
+div.stButton:has(button:contains("Click to Discover Cluster")) button {
     background-color: white !important;
     color: #dc3545 !important;  /* red text */
     border: 2px solid #dc3545 !important;
@@ -21,12 +21,13 @@ div.stButton > button[kind="secondary"] {
 }
 
 /* Hover effect */
-div.stButton > button[kind="secondary"]:hover {
+div.stButton:has(button:contains("Click to Discover Cluster")) button:hover {
     background-color: #dc3545 !important;
     color: white !important;
 }
 </style>
 """, unsafe_allow_html=True)
+
 
 # --- Page config ---
 st.set_page_config(
